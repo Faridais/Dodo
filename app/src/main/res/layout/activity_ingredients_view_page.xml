@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".IngredientsViewPage"
+    android:background="@color/black_transparent"
+    android:layout_gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ingredients_choice"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="7 / 13"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/orange"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/number_choice"/>
+
+
+    <ImageButton
+        android:id="@+id/back_ingredients_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:src="@drawable/arrow_down"
+
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ingredients_choice"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_height="550dp"
+        android:id="@+id/ingredients_choice"
+        tools:listitem="@layout/rv_combo_choice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

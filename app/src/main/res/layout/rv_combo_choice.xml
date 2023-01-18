@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewIngredients"
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="30sp"
+        android:background="@drawable/design_pop_up_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pizza_image"
+                android:layout_width="240dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/bagel_pizza"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/pizza_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/info"
+                android:layout_marginEnd="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Сырная"
+                android:textColor="@color/black"
+                android:textSize="27sp"
+                android:fontFamily="sans-serif-medium"
+                android:id="@+id/name_pizza"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_pizza"
+                android:maxLines="3"
+                android:layout_marginVertical="8dp"
+                android:text="Томаты, итальянские травы, томатный соус, увеличенная порция моцареллы"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="25sp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:id="@+id/description"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                android:text="Маленькая 25 см"
+                android:maxLines="1"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="25sp"
+                android:layout_marginTop="32dp"
+                android:textAlignment="center"
+                android:textColor="@color/titleColor"
+                android:fontFamily="sans-serif"
+                android:id="@+id/size"
+                />
+            <TextView
+                android:id="@+id/button_choose_combo"
+                android:layout_width="250sp"
+                android:layout_height="47sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/court_button"
+                android:text="Выбрать"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                tools:ignore="RtlCompat"
+                android:layout_marginBottom="25dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
